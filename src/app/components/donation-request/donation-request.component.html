@@ -1,0 +1,25 @@
+<!--<div class="container">-->
+<!--  <h1>{{donationRequest.title}}</h1>-->
+<!--  <div class="data">-->
+<!--    <img class="img" [src]="donationRequest.image" >-->
+<!--    <p>{{donationRequest.description}}</p>-->
+<!--  </div>-->
+<!--<button mat-raised-button class="btn" (click)="donate(this.id)">Donate</button>-->
+<!--</div>-->
+
+
+<mat-card class="container">
+  <mat-card-header>
+    <img mat-card-image class="img" [src]="donationRequest.image">
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card-title>{{donationRequest.title}}</mat-card-title>
+    <mat-card-subtitle>Kurac</mat-card-subtitle>
+    <p>
+      {{donationRequest.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button class="btn" (click)="donate(this.id)">Donate</button>
+  </mat-card-actions>
+</mat-card>

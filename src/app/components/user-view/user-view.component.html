@@ -1,0 +1,10 @@
+<div class="container" *ngIf="user$ | async as user">
+  <h1>User view page</h1>
+  <div class="user">
+    <h1>Name: {{user.name}}</h1>
+    <h1>Surname: {{user.surname}}</h1>
+    <h1>Email: {{user.email}}</h1>
+    <h1>Points: {{user.points}}</h1>
+    <h1>Claims: {{user.claims}}</h1>
+  </div>
+</div>

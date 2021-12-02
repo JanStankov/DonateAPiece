@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Top Contributors</h1>
+  <div class="top-contributors">
+    <div *ngFor="let topContributor of topContributors; let i = index">
+      <app-user [user]="topContributor" [id]="i"></app-user>
+    </div>
+  </div>
+</div>

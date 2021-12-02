@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Donate!</h1>
+<!--  <div class="donation-requests" *ngIf="donationRequests.length>0; else message">-->
+<!--    <div *ngFor="let donationRequest of donationRequests; let i = index">-->
+<!--      <app-donation-request [donationRequest]="donationRequest" [id]="i"></app-donation-request>-->
+<!--    </div>-->
+
+<!--  </div>-->
+
+  <carousel class="carousel" cellWidth="100%">
+    <div  class="carousel-cell" *ngFor="let donationRequest of donationRequests; let i = index">
+      <app-donation-request [donationRequest]="donationRequest" [id]="i"></app-donation-request>
+    </div>
+  </carousel>
+
+  <ng-template #message>
+    <h1 class="empty">No Donation Requests</h1>
+  </ng-template>
+
+
+</div>
+
+

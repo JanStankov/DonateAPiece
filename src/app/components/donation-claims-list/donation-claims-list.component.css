@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #E6F8FA;
+}
+
+.donation-requests {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10px;
+}
+.empty{
+  margin:150px;
+}

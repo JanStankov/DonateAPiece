@@ -1,0 +1,15 @@
+.container {
+  border: 1px ;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 2px #9E8E7B ;
+
+  background-color: #EADECF;
+  margin:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+h1{
+  margin: 20px;
+}
