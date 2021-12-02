@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {DonationService} from "../../service/donation.service";
-import {DonationDialogContentComponent} from "../donation-dialog-content/donation-dialog-content.component";
+import {DonationDialogContentComponent} from "../dialogs/donation-dialog-content/donation-dialog-content.component";
 import {MatDialog} from "@angular/material/dialog";
 import {
   AskForDonationDialogContentComponent
-} from "../ask-for-donation-dialog-content/ask-for-donation-dialog-content.component";
+} from "../dialogs/ask-for-donation-dialog-content/ask-for-donation-dialog-content.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -12,25 +13,30 @@ import {
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isLogged
+
 
   constructor(public donationService: DonationService,
+              private router: Router,
               private dialog: MatDialog) {
   }
 
   ngOnInit(): void {
-    this.isLogged = this.donationService.isLogged
-    console.log(this.isLogged)
   }
 
 
-  openDialog(ask:boolean) {
+  openDialog(ask: boolean) {
 
-    const dialogRef = this.dialog.open(ask ? AskForDonationDialogContentComponent : DonationDialogContentComponent);
+    if (!this.donationService.isLogged) {
+      if (confirm("You need to log in first. Do you want to be redirected to the login page?")) {
+        this.router.navigate(["login"])
+      }
+    } else {
+      const dialogRef = this.dialog.open(ask ? AskForDonationDialogContentComponent : DonationDialogContentComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+      });
+    }
   }
 
 }

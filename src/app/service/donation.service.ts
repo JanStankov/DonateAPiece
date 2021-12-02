@@ -18,9 +18,14 @@ export class DonationService {
 
   donationRequests = [
     new Donation("Kaput", "Baram kaput za vo zima", "assets/images/img1.jpg"),
-    new Donation("Kaput", "Baram kaput za vo zima", "assets/images/img2.jpg"),
-    new Donation("Kaput", "Baram kaput za vo zima", "assets/images/img3.jpg"),
-    //new Donation("Kaput", "Baram kaput za vo zima", "assets/images/img1.jpg")
+    new Donation("Jakna", "Baram kaput za vo zima", "assets/images/img2.jpg"),
+    new Donation("Jakna", "Baram kaput za vo zima", "assets/images/img2.jpg"),
+  ]
+
+  donationRequests2 = [
+    new Donation("Jakna", "Baram kaput za vo zima", "assets/images/img2.jpg"),
+    new Donation("Kaput", "Baram kaput za vo zima", "assets/images/img1.jpg"),
+    new Donation("Bluza", "Baram kaput za vo zima", "assets/images/img3.jpg"),
   ]
 
   donationsToClaim = [
@@ -34,10 +39,10 @@ export class DonationService {
 
   login(loginInfo: User) {
     console.log(loginInfo)
-    if (this.users[0].name == loginInfo.name && this.users[0].password == loginInfo.password) {
-      this.isLogged = true
-      console.log(this.isLogged)
-      this.router.navigateByUrl("/home")
-    }
+    // if (this.users[0].name == loginInfo.name && this.users[0].password == loginInfo.password) {
+    this.isLogged = true
+    console.log(this.isLogged)
+    this.router.navigateByUrl("/home")
   }
+
 }

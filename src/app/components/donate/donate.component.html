@@ -16,6 +16,10 @@
         </mat-form-field>
         <br>
 
+        <img [src]="url" height="400"><br>
+        <input id="imgUrl" type="file" required (change)="onselectFile($event)" formControlName="imgUrl">
+        <br>
+
         <button mat-raised-button color="primary" type="submit">List For Donation!</button>
       </form>
     </div>

@@ -1,9 +1,9 @@
 <div class="header">
-  <a [routerLink]="'home'" class="logo">DonateAPiece</a>
+  <a [routerLink]="'home'" class="logo"><img src="assets/images/doante.png" alt=""></a>
   <div class="header-right">
     <a *ngIf="!this.donationService.isLogged" [routerLink]="'login'" [routerLinkActive]="['active']">Login</a>
-    <a [routerLink]="'about'" [routerLinkActive]="['active']">About</a>
+    <a [routerLink]="'about'" >About</a>
     <a (click)="openDialog(true)">Ask for donation</a>
-    <a (click)="openDialog(false)">Donate</a>
+    <a class="donate-btn" (click)="openDialog(false)">Donate</a>
   </div>
 </div>

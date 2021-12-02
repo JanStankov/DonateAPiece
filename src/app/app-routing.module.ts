@@ -9,14 +9,15 @@ import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.
 import {UserViewComponent} from "./components/user-view/user-view.component";
 import {AskForDonationComponent} from "./components/ask-for-donation/ask-for-donation.component";
 import {DonateComponent} from "./components/donate/donate.component";
+import {AuthGuardService} from "./service/auth-guard.service";
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'user-view/:id', component: UserViewComponent },
-  { path: 'ask-for-donation', component: AskForDonationComponent },
-  { path: 'donate', component: DonateComponent },
+  { path: 'home', component: HomeComponent},
+  { path: 'user-view/:id', component: UserViewComponent, canActivate:[AuthGuardService] },
+  { path: 'ask-for-donation', component: AskForDonationComponent, canActivate:[AuthGuardService] },
+  { path: 'donate', component: DonateComponent, canActivate:[AuthGuardService] },
   { path: 'login', component: LoginComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'about', component: AboutComponent, canActivate:[AuthGuardService] },
   { path: '**', component: PageNotFoundComponent }
 ]
 

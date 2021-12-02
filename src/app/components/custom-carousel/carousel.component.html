@@ -1,0 +1,31 @@
+<!-- carousel -->
+<div class="carousel" *ngIf="slides.length>0; else message">
+    <ng-container *ngFor="let slide of slides; let i = index">
+      <img
+        *ngIf="i === currentSlide"
+        [src]="slide.image"
+        class="slide"
+        [@slideAnimation]="animationType"
+      />
+
+      <!-- controls -->
+      <button class="control prev" (click)="onPreviousClick()">
+        <span class="arrow left"></span>
+      </button>
+      <button class="control next" (click)="onNextClick()">
+        <span class="arrow right"></span>
+      </button>
+
+    </ng-container>
+
+      <div class="data">
+        <h1>{{slides[currentSlide].title}}</h1>
+        <h3>{{slides[currentSlide].description}}</h3>
+        <button mat-raised-button class="btn" (click)="donate(currentSlide)">Donate</button>
+      </div>
+</div>
+
+<ng-template class="message" #message>
+  <h1 class="empty">No Donation Requests</h1>
+</ng-template>
+

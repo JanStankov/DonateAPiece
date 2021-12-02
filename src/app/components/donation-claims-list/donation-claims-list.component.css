@@ -1,15 +1,18 @@
 .container {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-color: #E6F8FA;
+  margin: 20px;
 }
 
 .donation-requests {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 10px;
 }
 .empty{

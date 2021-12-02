@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DonationService} from "../../service/donation.service";
 import {Donation} from "../../model/Donation";
+import {AnimationType} from "../custom-carousel/carousel.animations";
 
 @Component({
   selector: 'app-donation-requests-list',
@@ -10,22 +11,15 @@ import {Donation} from "../../model/Donation";
 export class DonationRequestsListComponent implements OnInit {
 
   donationRequests: Donation[] = []
+  donationRequests2: Donation[] = []
+  animationType = AnimationType.Scale;
 
-  constructor(private donationService: DonationService) { }
-
-  slides: any = [[]];
-  chunk(arr, chunkSize) {
-    let R = [];
-    for (let i = 0, len = arr.length; i < len; i += chunkSize) {
-      R.push(arr.slice(i, i + chunkSize));
-    }
-    return R;
+  constructor(private donationService: DonationService) {
   }
 
   ngOnInit(): void {
     this.donationRequests = this.donationService.donationRequests
-    this.slides = this.chunk(this.donationRequests, 3);
-
+    this.donationRequests2 = this.donationService.donationRequests2
   }
 
 }
