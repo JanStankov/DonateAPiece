@@ -36,8 +36,9 @@
 
 /* Style the active/current link*/
 .header a.active {
-  background-color: dodgerblue;
-  color: white;
+  color: #fd3c65 !important;
+  font-weight: bold !important;
+  border-bottom: 1px solid #fd3c65;
 }
 
 /* Float the link section to the right */
@@ -59,5 +60,19 @@
 }
 
 .donate-btn {
-  background-color: #ff6767;
+  background-color: #fd3c65 !important;
+
+  color: white !important;
+  font-weight: bold !important;
+  display: flex;
+  align-items: center;
+
+}
+.ask-donate-btn {
+  color: #fd3c65 !important;
+  font-weight: bold !important;
+}
+.donate-btn span{
+  margin-left: 9px;
+  display: inline-block;
 }

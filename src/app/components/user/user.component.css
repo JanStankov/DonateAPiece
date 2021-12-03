@@ -1,15 +1,21 @@
-.container {
-  border: 1px ;
-  border-radius: 15px;
-  box-shadow: 2px 2px 2px 2px #9E8E7B ;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-  background-color: #EADECF;
+.container {
+  border-radius: 15px;
+  background-color: #F5F9F9;
   margin:10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  width:250px;
 }
-h1{
-  margin: 20px;
+h1,h3,p{
+  margin: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+.img{
+  height: 100px;
+  border-radius: 100px;
+  margin-top:10px;
 }

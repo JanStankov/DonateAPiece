@@ -1,4 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin:10px;
+  height: 500px;
+  width: 500px;
+  margin-left: 500px;
+}
+.btn{
+  background-color: #FFFDFA;
+  margin-top:50px;
+  width:400px;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+}
+
+.name{
+  width:400px;
+  font-family: 'Open Sans', sans-serif;
+  margin-top:50px;
+}
+.surname{
+  width:400px;
+  font-family: 'Open Sans', sans-serif;
+  margin-top:20px;
+}
+.email{
+  width:400px;
+  font-family: 'Open Sans', sans-serif;
+  margin-top:20px;
+}
+.password{
+  width:400px;
+  font-family: 'Open Sans', sans-serif;
+  margin-top:20px;
+}
+h1{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }

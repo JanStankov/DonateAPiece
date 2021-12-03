@@ -2,8 +2,10 @@
   <a [routerLink]="'home'" class="logo"><img src="assets/images/doante.png" alt=""></a>
   <div class="header-right">
     <a *ngIf="!this.donationService.isLogged" [routerLink]="'login'" [routerLinkActive]="['active']">Login</a>
-    <a [routerLink]="'about'" >About</a>
-    <a (click)="openDialog(true)">Ask for donation</a>
-    <a class="donate-btn" (click)="openDialog(false)">Donate</a>
+    <a [routerLink]="'about'" [routerLinkActive]="['active']">About</a>
+    <a class="ask-donate-btn" (click)="openDialog(true)">Ask for donation</a>
+    <a class="donate-btn" (click)="openDialog(false)"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-heart-fill" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+    </svg> <span>Donate</span></a>
   </div>
 </div>

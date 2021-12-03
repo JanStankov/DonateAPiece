@@ -1,5 +1,5 @@
 <div class="container" >
-  <h1>Claim Donations!</h1>
+  <h1 class="naslov">Donations That Can Be Claimed</h1>
   <div class="donation-requests" *ngIf="donationsToClaim.length !== 0; else message">
     <div *ngFor="let donationToClaim of donationsToClaim; let i = index">
       <app-donation-claim [donationToClaim]="donationToClaim" [id]="i"></app-donation-claim>

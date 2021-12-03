@@ -1,5 +1,6 @@
 <div class="container" (click)="viewUser()">
+  <img class="img" [src]="user.image" >
   <h1>{{user.name}} {{user.surname}}</h1>
   <p>{{user.email}}</p>
-  <h3>{{user.points}}</h3>
+  <h3>Points: {{user.points}}</h3>
 </div>

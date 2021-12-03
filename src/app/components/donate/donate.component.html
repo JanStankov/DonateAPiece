@@ -1,27 +1,27 @@
 <div class="container">
-  <mat-card>
-    <mat-card-title>List For Donation</mat-card-title>
+
+
     <div>
       <form [formGroup]="donateForm" (ngSubmit)="onSubmit()">
-
-        <mat-form-field>
+        <h1>List An Item For Donation</h1>
+        <mat-form-field class="title">
           <mat-label for="title">Title</mat-label>
           <input matInput id="title" required type="text" name="title" formControlName="title">
         </mat-form-field>
         <br>
 
-        <mat-form-field>
+        <mat-form-field class="description">
           <mat-label for="description">Description</mat-label>
-          <input matInput id="description" required type="text" formControlName="description">
+          <textarea matInput id="description" required type="text" formControlName="description"></textarea>
         </mat-form-field>
         <br>
 
         <img [src]="url" height="400"><br>
-        <input id="imgUrl" type="file" required (change)="onselectFile($event)" formControlName="imgUrl">
+        <input class="imageUp" id="imgUrl" type="file" required (change)="onselectFile($event)" formControlName="imgUrl">
         <br>
 
-        <button mat-raised-button color="primary" type="submit">List For Donation!</button>
+        <button class="btn" mat-raised-button type="submit">Donate</button>
       </form>
     </div>
-  </mat-card>
+
 </div>

@@ -1,16 +1,16 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {AppComponent} from './app.component';
-import {AppRoutingModule} from './app-routing.module';
-import {HomeComponent} from './components/home/home.component';
-import {UserComponent} from './components/user/user.component';
-import {LoginComponent} from './components/login/login.component';
-import {AboutComponent} from './components/about/about.component';
-import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
-import {RouterModule} from '@angular/router';
-import {HeaderComponent} from './components/header/header.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
+import { UserComponent } from './components/user/user.component';
+import { LoginComponent } from './components/login/login.component';
+import { AboutComponent } from './components/about/about.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
@@ -40,6 +40,7 @@ import {NguCarouselModule} from "@ngu/carousel";
 import {CarouselComponent} from "./components/custom-carousel/carousel.component";
 import { DonateDialogComponent } from './components/dialogs/donate-dialog/donate-dialog.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import {ToastrModule} from "ngx-toastr";
 
 
 @NgModule({
@@ -84,7 +85,8 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     MatSliderModule,
     MatFormFieldModule,
     MatDialogModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

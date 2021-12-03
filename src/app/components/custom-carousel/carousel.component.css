@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 :host {
   flex: 1;
 }
@@ -8,13 +10,13 @@
   width: 600px;
   overflow: hidden;
   border-radius: 0.5em;
-  border: 1px solid gray;
+  /*border: 1px solid gray;*/
 }
 .slide {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 60px;
+  width: 80%;
   height: 80%;
   object-fit: cover;
   transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
@@ -27,10 +29,11 @@
 .data {
   position: relative;
   background-color: #ffffff;
-  margin-top: 700px;
+  margin-top: 500px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  margin-bottom: 10px;
 }
 
 .message {
@@ -69,8 +72,8 @@
 /* style the arrows */
 .arrow {
   display: block;
-  border-left: 0.1em solid white;
-  border-bottom: 0.1em solid white;
+  border-left: 0.1em solid #E3EBEB;
+  border-bottom: 0.1em solid #E3EBEB;
   width: 0.5em;
   height: 0.5em;
 }
@@ -79,4 +82,24 @@
 }
 .arrow.right {
   transform: rotate(225deg);
+}
+.btn{
+  width:480px;
+  margin-left:60px;
+}
+h1{
+  margin-left:60px;
+  font-family: 'Open Sans', sans-serif;
+}
+h3{
+  margin-left:60px;
+  font-family: 'Open Sans', sans-serif;
+}
+hr {
+  width: 480px;
+  height: 2px;
+  border: none;
+  background-color: #ff6767;
+  opcaity: 0.5;
+
 }

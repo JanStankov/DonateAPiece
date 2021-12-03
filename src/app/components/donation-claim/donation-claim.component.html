@@ -1,7 +1,9 @@
 <mat-card class="container">
-  <h1>{{donationToClaim.title}}</h1>
+  <img class="img" [src]="donationToClaim.image" >
+
   <div class="data">
-    <img class="img" [src]="donationToClaim.image" >
+    <h1>{{donationToClaim.title}}</h1>
+    <hr>
     <p>{{donationToClaim.description}}</p>
   </div>
   <button mat-raised-button class="btn" (click)="claimDonation(this.id)">Claim</button>

@@ -101,8 +101,8 @@ export class CarouselComponent implements OnInit {
     } else {
       const dialogRef = this.dialog.open(DonateDialogComponent, {
         data: {
-          title: "List For Donation",
-          buttonText: "List For Donation!"
+          title: "Donation",
+          buttonText: "Donate!"
         }
       })
 

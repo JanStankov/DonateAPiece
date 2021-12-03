@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'donate', component: DonateComponent, canActivate:[AuthGuardService] },
   { path: 'login', component: LoginComponent },
   { path: 'about', component: AboutComponent, canActivate:[AuthGuardService] },
+  {path:"", redirectTo:"home", pathMatch:'full'},
   { path: '**', component: PageNotFoundComponent }
 ]
 

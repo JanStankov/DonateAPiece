@@ -11,7 +11,7 @@ import {AnimationType} from "../custom-carousel/carousel.animations";
 export class DonationRequestsListComponent implements OnInit {
 
   donationRequests: Donation[] = []
-  donationRequests2: Donation[] = []
+
   animationType = AnimationType.Scale;
 
   constructor(private donationService: DonationService) {
@@ -19,7 +19,7 @@ export class DonationRequestsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.donationRequests = this.donationService.donationRequests
-    this.donationRequests2 = this.donationService.donationRequests2
+
   }
 
 }
